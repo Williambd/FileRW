@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Created by williambd
+ * on 2019-04-04
+ * to allow a user to edit files.
+ * 
  */
 
 package readfromafile;
@@ -45,6 +46,10 @@ public class ReadFromAFile {
             end = true;
         }}
     }
+    /**
+     * Writes the users input to a file.
+     * @param ap 
+     */
     public static void write(boolean ap){
         System.out.println("Write to what File?");
         BufferedWriter writer;
@@ -65,6 +70,10 @@ public class ReadFromAFile {
         }
     }
     
+    /**
+     * creates new file that user names
+     * @throws IOException 
+     */
     public static void newFile() throws IOException{
         System.out.println("Name of File:");
         File file= new File(scanln());
@@ -76,16 +85,25 @@ public class ReadFromAFile {
         
     }
     
+    /**
+     * Scans a line
+     * @return String of the next line.
+     */
     public static String scanln(){
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
     
-    public static void readFile(String file) throws IOException{
+    /**
+     *  Reads a file
+     * @param nameOfFile
+     * @throws IOException 
+     */
+    public static void readFile(String nameOfFile) throws IOException{
         
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader(file));
+            br = new BufferedReader(new FileReader(nameOfFile));
             String line;
             while ((line = br.readLine()) != null){
                 System.out.println(line);
