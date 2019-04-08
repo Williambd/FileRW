@@ -1,7 +1,8 @@
 /**
+ * ReadFromAFile.java
  * Created by williambd
  * on 2019-04-04
- * to allow a user to edit files.
+ * to allow a user to open, read, and edit files.
  * 
  */
 
